@@ -16,13 +16,17 @@ import {
   SiNextdotjs,
   SiSolidity,
   SiPostgresql,
+  SiAdobephotoshop,
 } from "react-icons/si";
 import { TbBrandGolang } from "react-icons/tb";
 
 function Techstack() {
-  return (
+  return ( 
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
       <Col xs={4} md={2} className="tech-icons">
+        
+      </Col>
+      {/* <Col xs={4} md={2} className="tech-icons">
         <CgCPlusPlus />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
@@ -63,7 +67,7 @@ function Techstack() {
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <DiJava />
-      </Col>
+      </Col> */}
     </Row>
   );
 }

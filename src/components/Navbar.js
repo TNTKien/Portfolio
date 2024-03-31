@@ -70,10 +70,10 @@ function NavBar() {
             </Nav.Item>
 
             <Nav.Item>
-              <Nav.Link
-                as={Link}
-                to="/project"
-                onClick={() => updateExpanded(false)}
+            <Nav.Link
+                href="https://baclethanxa.me/"
+                target="_blank"
+                rel="noreferrer"
               >
                 <AiOutlineFundProjectionScreen
                   style={{ marginBottom: "2px" }}
@@ -104,7 +104,7 @@ function NavBar() {
 
             <Nav.Item className="fork-btn">
               <Button
-                href="https://github.com/soumyajit4419/Portfolio"
+                href="https://baclethanxa.me//Portfolio"
                 target="_blank"
                 className="fork-btn-inner"
               >

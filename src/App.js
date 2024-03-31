@@ -17,6 +17,15 @@ import "./style.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+function Redirect() {
+  useEffect(() => {
+    window.open('https://baclethanxa.me/', '_blank');
+    window.location = '/';
+  }, []);
+
+  return null;
+}
+
 function App() {
   const [load, upadateLoad] = useState(true);
 
@@ -36,7 +45,7 @@ function App() {
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/project" element={<Projects />} />
+          {/* <Route path="/project" element={<Redirect />} /> */}
           <Route path="/about" element={<About />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="*" element={<Navigate to="/"/>} />
