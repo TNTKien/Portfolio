@@ -70,6 +70,30 @@ function NavBar() {
             </Nav.Item>
 
             <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/project"
+                onClick={() => updateExpanded(false)}
+              >
+                <AiOutlineFundProjectionScreen
+                  style={{ marginBottom: "2px" }}
+                />{" "}
+                Projects
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item className="fork-btn">
+              <Button
+                href="https://baclethanxa.me/"
+                target="_blank"
+                className="fork-btn-inner"
+              >
+                <CgGitFork style={{ fontSize: "1.2em" }} />{" "}
+                <AiFillStar style={{ fontSize: "1.1em" }} />
+              </Button>
+            </Nav.Item>
+
+            {/* <Nav.Item>
             <Nav.Link
                 href="https://baclethanxa.me/"
                 target="_blank"
@@ -80,7 +104,7 @@ function NavBar() {
                 />{" "}
                 Projects
               </Nav.Link>
-            </Nav.Item>
+            </Nav.Item> */}
 
             {/* <Nav.Item>
               <Nav.Link
