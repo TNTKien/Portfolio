@@ -64,7 +64,7 @@ function Projects() {
           {/* <strong className="purple">Loading...</strong> */}
           <Typewriter
           options={{
-            strings: [ 'Loading...' ],
+            strings: [ 'Loading...','We are almost done with your Mom!', 'Oh! Your sister wants another round, pls wait!'],
             autoStart: true,
             loop: true,
             deleteSpeed: 50,
