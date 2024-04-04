@@ -3,6 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 import koharu from "../../Assets/Projects/koharu.png";
+import Typewriter from "typewriter-effect";
 // import leaf from "../../Assets/Projects/leaf.png";
 // import emotion from "../../Assets/Projects/emotion.png";
 // import editor from "../../Assets/Projects/codeEditor.png";
@@ -30,9 +31,17 @@ async function getBooks(){
 
 function Projects() {  
   const [projectCards, setProjectCards] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  // useEffect(() => {
+  //   getBooks().then(cards => setProjectCards(cards));
+  // }, []);
 
   useEffect(() => {
-    getBooks().then(cards => setProjectCards(cards));
+    setIsLoading(true);
+    getBooks().then(cards => {
+      setProjectCards(cards);
+      setIsLoading(false);
+    });
   }, []);
 
   const [isConfirmed, setIsConfirmed] = useState(false);
@@ -46,6 +55,24 @@ function Projects() {
         <button className="confirm-btn" onClick={() => setIsConfirmed(true)}>I'm Safe!</button>
       </div>
     );
+  }
+
+  if (isLoading) {
+    return (
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', flexDirection: 'column' }}>
+        <h1 className="project-heading">
+          {/* <strong className="purple">Loading...</strong> */}
+          <Typewriter
+          options={{
+            strings: [ 'Loading...' ],
+            autoStart: true,
+            loop: true,
+            deleteSpeed: 50,
+          }}
+        />
+        </h1>
+      </div>
+    ); // Replace this with your loading component or spinner
   }
 
   return (
