@@ -15,7 +15,7 @@ async function getBooks(){
   const api = 'https://api.baclethanxa.me/books';
   const resp = await fetch(api);
   const data = await resp.json();
-  const demoBooks = data.slice(0, 15);
+  const demoBooks = data.slice(0, 18);
   const projectCards = demoBooks.map((book, index) => (
     <Col md={4} className="project-card" key={index}>
       <ProjectCard
